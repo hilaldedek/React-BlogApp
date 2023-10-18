@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+nav {
+    margin-right:120px;
+  }
+  .verticalNav {
+    width : 40px;
+    position:fixed;
+    height:100vh;
+    top:0;
+    right:0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    line-height:40px;
+    text-transform : uppercase;
+    cursor:pointer;
+    transition : all 300ms ease-in;
+    
+  }
+  
+  .verticalNav:hover {
+    width : 100%;
+    writing-mode: unset;
+    text-orientation: sideways;
+  }
+  
+  .verticalNav:hover .navContent {
+    margin-left:120px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh
+  }
+  .navContent p{
+    line-height:1.2em
+  }
+  .navContent,
+  .verticalNav:hover .siteNavLabel  {
+    display: none;
+  }
+  .subNavMenu {
+    font-size:6em;
+    line-height:1em;
+    color: #fff;
+  }
+  
+  .verticalNav:nth-child(1){
+    right:80px;
+    background: #E4E4D0;
+    font-family: 'Tilt Neon', sans-serif;
+    color: #555843;
+    font-size: 1.1rem;
+  }
+  .verticalNav:nth-child(2){
+    right:40px;
+    background: #AEC3AE;
+    font-family: 'Tilt Neon', sans-serif;
+    color: #555843;
+    font-size: 1.1rem;
+  }
+  .verticalNav:nth-child(3){
+    right:0px;
+    background: #94A684;
+    font-family: 'Tilt Neon', sans-serif;
+    color: #555843;
+    font-size: 1.1rem;
+  }
+  .hideToggle nav {
+    margin-right:0px;
+  }
+  .hideToggle .verticalNav {
+    display:none
+  }
+  #toggleRightMenu {
+    cursor : pointer
+  }
+  .hideToggle #toggleRightMenu {
+    transform : rotate(180deg)
+  }
+  .Navbar{
+    font-family: 'Pacifico', cursive;
+    color: #555843;
+    
+  }
+  .NavBack{
+    background-image:"src\assets\nav.png" ;
+  }
