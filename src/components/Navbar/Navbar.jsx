@@ -4,109 +4,134 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import FilledInput from '@mui/material/FilledInput';
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+
+import FormControl from '@mui/material/FormControl';
+
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import TextField from '@mui/material/TextField';
+import google from "../../assets/google.png";
+import world from "../../assets/world2.gif";
 
 
 const Navbar = () => {
+    const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
   return (
     <div>
         <div id="navWrap">
         <Box sx={{ flexGrow: 1}}>
       <AppBar position="static" sx={{backgroundColor:"#E4E4D0"}} className='Navbar'>
-        <Toolbar variant="dense">
-          <Typography variant="h4" component="div" className='Navbar'>
-            HilitoBlog
+        <Toolbar variant="dense" >
+          <Typography variant="h4" component="div" className='Navbar' sx={{fontFamily:"'Lobster', sans-serif"}}>
+          HilitoBlog
           </Typography>
         </Toolbar>
       </AppBar>
     </Box>
   <div id="verticalNavWrap">
     <div className="verticalNav">
-      <div className="siteNavLabel  text-center">About Us</div>
-      {/* <div className="navContent">
+      <div className="siteNavLabel  text-center">PROFILE</div>
+      <div className="navContent">
         <div className="container">
           <div className="row align-items-center">
             <div className="col">
-              <h2 className="jumboHeading">About Us</h2>
-              <p className="pt-4 ps-4 pe-4">
-                A mobile app to register users's entry exit. Designed and
-                developed by Siva Kishore G.
-              </p>
-              <div className="ms-4">
-                <button className="btn btn-info">Download now</button>
-              </div>
-            </div>
-            <div className="col">
-              <div>
-                <a href="#" className="subNavMenu">
-                  Blog
-                </a>
-              </div>
-              <div>
-                <a href="#" className="subNavMenu">
-                  Contact Us
-                </a>
-              </div>
-              <div>
-                <a href="#" className="subNavMenu">
-                  Subscribe
-                </a>
-              </div>
-              <div>
-                <a href="#" className="subNavMenu">
-                  Partners
-                </a>
-              </div>
+              
+            <h1 style={{fontFamily:"'DM Serif Display', serif"}}>PROFILE</h1>
+              
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
     <div className="verticalNav">
-      <div className="siteNavLabel text-center">Pricing</div>
-      {/* <div className="navContent">
+      <div className="siteNavLabel text-center"> LOGIN</div>
+      <div>
+        <div className="navContent">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col">
-              <h2 className="jumboHeading">Pricing</h2>
-              <p className="p-4">
-                Create upto 5 locations and 30 days of backup for free users.
-              </p>
-            </div>
-            <div className="col">
-              <div className="card text-center" style={{ width: "18rem" }}>
-                <div className="card-header bg-info">PREMIUM</div>
-                <div className="card-body">
-                  <h5 className="card-title" />
-                  <ul className="card-text list-unstyled">
-                    <li>Upto 20 Locations</li>
-                    <li>1 Year Data</li>
-                    <li>Separate App</li>
-                    <li>Zero Ads</li>
-                    <li>Unlimited popups</li>
-                  </ul>
+          <div className="align-items-center">
+            <div className="col-md-7 mx-auto">
+                <img src={world} alt="world" style={{width:"15rem",height:"15rem",borderRadius:"50%"}} />
+                <h1 style={{fontFamily:"'DM Serif Display', serif"}}>LOGIN</h1>
+                <div className='login'>
+                    <TextField sx={{ m: 1, width: '25ch' }} id="filled-basic" label="Email" variant="filled" />
+            <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
+          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
+          <FilledInput
+            id="filled-adornment-password"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <Button variant="contained" sx={{backgroundColor:"#6b7a6b",marginBottom:"1rem", width:"75%"}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}}>Login</Button>
+        <Button variant="contained" sx={{backgroundColor:"#6b7a6b", width:"75%"}}style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}}>With <img src={google} alt="google"className='googleImg' /></Button>
                 </div>
-                <div className="card-footer bg-dark text-white">2000 INR</div>
-              </div>
+            
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
+      
+      </div>
     </div>
     <div className="verticalNav text-center text-white">
-      <div className="siteNavLabel">Services</div>
-      {/* <div className="navContent">
+      <div className="siteNavLabel">REGISTER</div>
+      <div className="navContent">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-7 mx-auto">
-              <h2 className="jumboHeading">Services</h2>
-              <p className="p-4">
-                Servicing apartments, restaurants, hotels &amp; businesses
-              </p>
+            <img src={world} alt="world" style={{width:"15rem",height:"15rem",borderRadius:"50%"}} />
+                <h1 style={{fontFamily:"'DM Serif Display', serif"}}>REGISTER</h1>
+                <div className='login'>
+                    <TextField sx={{ m: 1, width: '25ch' }} id="filled-basic" label="Email" variant="filled" />
+            <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
+          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
+          <FilledInput
+            id="filled-adornment-password"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <Button variant="contained" sx={{backgroundColor:"#555843",marginBottom:"1rem", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem"}}>Login</Button>
+        <Button variant="contained" sx={{backgroundColor:"#555843", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem"}}>With <img src={google} alt="google"className='googleImg' /></Button>
+                </div>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   </div>
 </div>

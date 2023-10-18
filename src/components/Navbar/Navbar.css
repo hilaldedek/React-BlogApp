@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 nav {
     margin-right:120px;
   }
@@ -12,7 +13,7 @@ nav {
     writing-mode: vertical-rl;
     text-orientation: upright;
     line-height:40px;
-    text-transform : uppercase;
+    
     cursor:pointer;
     transition : all 300ms ease-in;
     
@@ -55,7 +56,7 @@ nav {
     right:40px;
     background: #AEC3AE;
     font-family: 'Tilt Neon', sans-serif;
-    color: #555843;
+    color: #6b7a6b;
     font-size: 1.1rem;
   }
   .verticalNav:nth-child(3){
@@ -78,10 +79,19 @@ nav {
     transform : rotate(180deg)
   }
   .Navbar{
-    font-family: 'Pacifico', cursive;
+    
     color: #555843;
     
   }
-  .NavBack{
-    background-image:"src\assets\nav.png" ;
+  .login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
   }
+.googleImg{
+    width: 4.4rem;
+    height: 1.8rem;
+    margin-left: 0.5rem;
+}
