@@ -18,6 +18,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import TextField from '@mui/material/TextField';
 import google from "../../assets/google.png";
 import world from "../../assets/world2.gif";
+import { hover } from '@testing-library/user-event/dist/hover';
 
 
 const Navbar = () => {
@@ -49,7 +50,9 @@ const Navbar = () => {
             <div className="col">
               
             <h1 style={{fontFamily:"'DM Serif Display', serif"}}>PROFILE</h1>
-              
+            <Button variant="contained" sx={{backgroundColor:"#8e8e7e",marginBottom:"1rem", width:"75%",'&:hover': {
+            backgroundColor: '#d2d2bd'
+          }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}} >Add New Blog</Button>
             </div>
           </div>
         </div>
@@ -85,8 +88,12 @@ const Navbar = () => {
             }
           />
         </FormControl>
-        <Button variant="contained" sx={{backgroundColor:"#6b7a6b",marginBottom:"1rem", width:"75%"}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}}>Login</Button>
-        <Button variant="contained" sx={{backgroundColor:"#6b7a6b", width:"75%"}}style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}}>With <img src={google} alt="google"className='googleImg' /></Button>
+        <Button variant="contained" sx={{backgroundColor:"#6b7a6b",marginBottom:"1rem", width:"75%",'&:hover': {
+            backgroundColor: '#889b88',
+          }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}} >Login</Button>
+        <Button variant="contained" sx={{backgroundColor:"#6b7a6b", width:"75%",'&:hover': {
+            backgroundColor: '#889b88',
+          }}}style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}}>With <img src={google} alt="google"className='googleImg' /></Button>
                 </div>
             
             </div>
@@ -125,8 +132,15 @@ const Navbar = () => {
             }
           />
         </FormControl>
-        <Button variant="contained" sx={{backgroundColor:"#555843",marginBottom:"1rem", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem"}}>Login</Button>
-        <Button variant="contained" sx={{backgroundColor:"#555843", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem"}}>With <img src={google} alt="google"className='googleImg' /></Button>
+        <Button variant="contained" sx={{backgroundColor:"#555843",marginBottom:"1rem", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",
+          '&:hover': {
+            backgroundColor: '#7e8364',
+          }}} >Login</Button>
+        <Button variant="contained" sx={{backgroundColor:"#555843", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",
+          '&:hover': {
+            backgroundColor: '#7e8364',
+          }
+      }}>With <img src={google} alt="google"className='googleImg' /></Button>
                 </div>
             </div>
           </div>
