@@ -7,18 +7,14 @@ import Typography from '@mui/material/Typography';
 import FilledInput from '@mui/material/FilledInput';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
-
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
-
 import FormControl from '@mui/material/FormControl';
-
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import TextField from '@mui/material/TextField';
 import google from "../../assets/google.png";
 import world from "../../assets/world2.gif";
-import { hover } from '@testing-library/user-event/dist/hover';
 
 
 const Navbar = () => {
@@ -49,10 +45,10 @@ const Navbar = () => {
           <div className="row align-items-center">
             <div className="col">
               
-            <h1 style={{fontFamily:"'DM Serif Display', serif"}}>PROFILE</h1>
-            <Button variant="contained" sx={{backgroundColor:"#8e8e7e",marginBottom:"1rem", width:"75%",'&:hover': {
+            <h1 style={{fontFamily:"'DM Serif Display', serif"}}>────PROFILE────</h1>
+            <Button variant="contained" sx={{backgroundColor:"#8e8e7e42",marginBottom:"1rem", width:"100%",'&:hover': {
             backgroundColor: '#d2d2bd'
-          }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}} >Add New Blog</Button>
+          }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#8d8d7f"}} >Add New Blog</Button>
             </div>
           </div>
         </div>
@@ -66,7 +62,7 @@ const Navbar = () => {
           <div className="align-items-center">
             <div className="col-md-7 mx-auto">
                 <img src={world} alt="world" style={{width:"15rem",height:"15rem",borderRadius:"50%"}} />
-                <h1 style={{fontFamily:"'DM Serif Display', serif"}}>LOGIN</h1>
+                <h1 style={{fontFamily:"'DM Serif Display', serif"}}>───LOGIN───</h1>
                 <div className='login'>
                     <TextField sx={{ m: 1, width: '25ch' }} id="filled-basic" label="Email" variant="filled" />
             <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
@@ -110,7 +106,7 @@ const Navbar = () => {
           <div className="row align-items-center">
             <div className="col-md-7 mx-auto">
             <img src={world} alt="world" style={{width:"15rem",height:"15rem",borderRadius:"50%"}} />
-                <h1 style={{fontFamily:"'DM Serif Display', serif"}}>REGISTER</h1>
+                <h1 style={{fontFamily:"'DM Serif Display', serif"}}>──REGISTER──</h1>
                 <div className='login'>
                     <TextField sx={{ m: 1, width: '25ch' }} id="filled-basic" label="Email" variant="filled" />
             <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
