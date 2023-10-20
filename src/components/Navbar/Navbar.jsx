@@ -91,7 +91,6 @@ const Navbar = () => {
             backgroundColor: '#889b88',
           }}}style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}}>With <img src={google} alt="google"className='googleImg' /></Button>
                 </div>
-            
             </div>
           </div>
         </div>
