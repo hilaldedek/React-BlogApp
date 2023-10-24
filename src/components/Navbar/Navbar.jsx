@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../Navbar/Navbar.css";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -19,12 +19,20 @@ import world from "../../assets/world2.gif";
 
 const Navbar = () => {
     const [showPassword, setShowPassword] = React.useState(false);
-
+    const [password,setPassword]=useState("");
+    const [email,setEmail]=useState("");
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  
+  const Register=()=>{
+    console.log("selam");
+    console.log("email",email);
+    console.log("password",password);
+  }
+
   return (
     <div>
         <div id="navWrap">
@@ -38,6 +46,7 @@ const Navbar = () => {
       </AppBar>
     </Box>
   <div id="verticalNavWrap">
+    {/* PROFILE */}
     <div className="verticalNav">
       <div className="siteNavLabel  text-center">PROFILE</div>
       <div className="navContent">
@@ -54,6 +63,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+    {/* LOGİN */}
     <div className="verticalNav">
       <div className="siteNavLabel text-center"> LOGIN</div>
       <div>
@@ -65,10 +75,10 @@ const Navbar = () => {
                 <h1 style={{fontFamily:"'DM Serif Display', serif"}}>───LOGIN───</h1>
                 <div className='login'>
                     <TextField sx={{ m: 1, width: '25ch' }} id="filled-basic" label="Email" variant="filled" />
-            <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
+            <form sx={{ m: 1, width: '25ch' }} variant="filled">
           <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
           <FilledInput
-            id="filled-adornment-password"
+            id="filled-adornment-password" autoComplete=''
             type={showPassword ? 'text' : 'password'}
             endAdornment={
               <InputAdornment position="end">
@@ -83,7 +93,7 @@ const Navbar = () => {
               </InputAdornment>
             }
           />
-        </FormControl>
+        </form>
         <Button variant="contained" sx={{backgroundColor:"#6b7a6b",marginBottom:"1rem", width:"75%",'&:hover': {
             backgroundColor: '#889b88',
           }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#E4E4D0"}} >Login</Button>
@@ -98,6 +108,7 @@ const Navbar = () => {
       
       </div>
     </div>
+    {/* REGISTER */}
     <div className="verticalNav text-center text-white">
       <div className="siteNavLabel">REGISTER</div>
       <div className="navContent">
@@ -107,11 +118,11 @@ const Navbar = () => {
             <img src={world} alt="world" style={{width:"15rem",height:"15rem",borderRadius:"50%"}} />
                 <h1 style={{fontFamily:"'DM Serif Display', serif"}}>──REGISTER──</h1>
                 <div className='login'>
-                    <TextField sx={{ m: 1, width: '25ch' }} id="filled-basic" label="Email" variant="filled" />
-            <FormControl sx={{ m: 1, width: '25ch' }} variant="filled">
-          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
-          <FilledInput
-            id="filled-adornment-password"
+                    <TextField sx={{ m: 1, width: '25ch' }} id="filled-basic personEmail" label="Email"  value={email} onChange={e=>setEmail(e.target.value)}  variant="filled" />
+            <form sx={{ m: 1, width: '25ch' }} variant="filled" >
+          <InputLabel value={password} onChange={e=>setPassword(e.target.value)}htmlFor="filled-adornment-password" >Password</InputLabel>
+          <FilledInput 
+            id="filled-adornment-password userPassword" autoComplete=''
             type={showPassword ? 'text' : 'password'}
             endAdornment={
               <InputAdornment position="end">
@@ -126,11 +137,11 @@ const Navbar = () => {
               </InputAdornment>
             }
           />
-        </FormControl>
-        <Button variant="contained" sx={{backgroundColor:"#555843",marginBottom:"1rem", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",
+            </form>
+        <Button variant="contained" onClick={Register()}  sx={{backgroundColor:"#555843",marginBottom:"1rem", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",
           '&:hover': {
             backgroundColor: '#7e8364',
-          }}} >Login</Button>
+          }}}  >Register</Button>
         <Button variant="contained" sx={{backgroundColor:"#555843", width:"75%",color:"#E4E4D0",fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",
           '&:hover': {
             backgroundColor: '#7e8364',
