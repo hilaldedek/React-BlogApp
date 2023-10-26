@@ -34,32 +34,32 @@ const Navbar = () => {
   //   }
   // }
   const list=[];
-  var counter=0;
-  const Register=()=>{
-    
-    counter++;
-    
+  var counter=1;
+  const Register=()=>{    
     console.log("hello REGİSTER");
     if(counter===1){
       console.log("COUNTER",counter);
-      window.localStorage.setItem(`${counter+1}.user Email`,email);
-    window.localStorage.setItem(`${counter+1}.user Password`,password);
+      window.localStorage.setItem(`${counter}.user Email`,email);
+    window.localStorage.setItem(`${counter}.user Password`,password);
     // const user =new userRegister(`${email}`,`${password}`);
     list.push(email);
     console.log("if bloğu");
     console.log(list);
+    counter++;
+    console.log(counter);
+    
     }
     else if((list.findIndex((x)=> x===email))===-1){
       // const user =new userRegister(`${email}`,`${password}`);
       list.push(email);
-      window.localStorage.setItem(`${counter+1}.user Email`,email);
-    window.localStorage.setItem(`${counter+1}.user Password`,password);
+      window.localStorage.setItem(`${counter}.user Email`,email);
+    window.localStorage.setItem(`${counter}.user Password`,password);
     console.log("else if bloğu");
     console.log(list);
+    counter++;
     }
     else{
       console.log("bu mail kullanılmış");
-      counter--;
     }
   }
 
