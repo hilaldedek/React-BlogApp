@@ -12,8 +12,11 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import TextField from '@mui/material/TextField';
 import world from "../../assets/world2.gif";
-import defaultImg from "../../assets/world.png"
+
 import { InputLabel } from '@mui/material';
+import Card from '../Card/Card';
+
+
 
 
 const Navbar = () => {
@@ -35,32 +38,44 @@ const Navbar = () => {
   // }
   const list=[];
   var counter=1;
-  const Register=()=>{    
+  const Register=()=>{ 
+    
     console.log("hello REGİSTER");
+    console.log("GELEN EMAİL: ",email);
+    const hesap=(list.findIndex((x)=> x===email));
+    console.log("LİST.FİNİNDEX: ",hesap);
+
     if(counter===1){
-      console.log("COUNTER",counter);
       window.localStorage.setItem(`${counter}.user Email`,email);
     window.localStorage.setItem(`${counter}.user Password`,password);
     // const user =new userRegister(`${email}`,`${password}`);
-    list.push(email);
-    console.log("if bloğu");
-    console.log(list);
-    counter++;
-    console.log(counter);
     
+
+    // list.push(email);
+    console.log("if bloğu");
+    // console.log(list);
+    counter++;
+    console.log("İF BLOĞUNDAKİ COUNTER: ",counter);
+    
+   
     }
     else if((list.findIndex((x)=> x===email))===-1){
       // const user =new userRegister(`${email}`,`${password}`);
-      list.push(email);
+      // list.push(email);
+      
+    
       window.localStorage.setItem(`${counter}.user Email`,email);
     window.localStorage.setItem(`${counter}.user Password`,password);
     console.log("else if bloğu");
-    console.log(list);
+    // console.log(list);
     counter++;
+    console.log("ELİF BLOĞUNDAKİ COUNTER: ",counter);
     }
     else{
       console.log("bu mail kullanılmış");
     }
+    // list.push(email);   
+    // console.log(list);
   }
 
   const Login=()=>{
@@ -77,6 +92,7 @@ const Navbar = () => {
     giris=false;
     console.log("hatalı giriş");
   }
+  
 }
 
   return (
@@ -91,128 +107,7 @@ const Navbar = () => {
         </Toolbar>
       </AppBar>
     </Box>
-    <div className='cardStyle'>
-        <div className="card">
-          <img className="card-image" src={defaultImg} alt='defaultImg' />
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-        <div className="card">
-          <img className="card-image" src={defaultImg} alt='defaultImg' />
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-        <div className="card">
-          <img className="card-image" src={defaultImg} alt='defaultImg'/>
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-        <div className="card">
-          <img className="card-image" src={defaultImg} alt='defaultImg'/>
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-        <div className="card">
-          <img className="card-image" alt='defaultImg' src={defaultImg} />
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-        <div className="card">
-          <img className="card-image" src={defaultImg} alt='defaultImg'/>
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-        <div className="card">
-          <img className="card-image" src={defaultImg} alt='defaultImg'/>
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-        <div className="card">
-          <img className="card-image" src={defaultImg} alt='defaultImg'/>
-          <div className="category"> Illustration </div>
-          <div className="heading">
-            {" "}
-            A heading that must span over two lines
-            <div className="author">
-              {" "}
-              By <span className="name">Abi</span> 4 days ago
-            </div>
-          </div>
-          <button>
-              See More
-          </button>
-        </div>
-    </div>
+    <Card/>
   <div id="verticalNavWrap">
     {/* PROFILE */}
     <div className="verticalNav">
