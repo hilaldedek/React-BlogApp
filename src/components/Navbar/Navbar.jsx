@@ -121,7 +121,11 @@ const Navbar = () => {
             <Button variant="contained" sx={{backgroundColor:"#8e8e7e42",marginBottom:"1rem", width:"100%",'&:hover': {
             backgroundColor: '#d2d2bd'
           }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#8d8d7f"}} >
-            <Link to="/newblog">Add New Blog</Link></Button>
+            <Link to="/newblog" style={{textDecoration:"none",color:"#8d8d7f"}}>Add New Blog</Link></Button>
+            <Button variant="contained" sx={{backgroundColor:"#8e8e7e42",marginBottom:"1rem", width:"100%",'&:hover': {
+            backgroundColor: '#d2d2bd'
+          }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#8d8d7f"}} >
+            <Link to="/updateblog" style={{textDecoration:"none",color:"#8d8d7f"}}>Update/Delete Blog</Link></Button>
             </div>
           </div>
         </div>

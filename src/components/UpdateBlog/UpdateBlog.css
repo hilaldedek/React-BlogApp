@@ -31,10 +31,22 @@ margin-right: 10rem;
     border-radius: 10px;
     border: none;
     font-size: 1.3rem;
-    margin-top: 1rem;
+    margin: 1rem;
     padding: 0.5rem 2rem;
     background-color: #555843;
     color: #e4e4d0e0;
-    margin: auto;
+    
+    font-family: 'DM Serif Display', serif;
+}
+.deleteBtn{
+    border-radius: 10px;
+    border: none;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    
+    padding: 0.5rem 2rem;
+    background-color: #584343;
+    color: #e4e4d0e0;
+    
     font-family: 'DM Serif Display', serif;
 }
