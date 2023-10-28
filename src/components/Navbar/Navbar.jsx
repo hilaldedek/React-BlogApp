@@ -14,7 +14,7 @@ import TextField from '@mui/material/TextField';
 import world from "../../assets/world2.gif";
 
 import { InputLabel } from '@mui/material';
-import Card from '../Card/Card';
+import { Link } from 'react-router-dom';
 
 
 
@@ -107,7 +107,7 @@ const Navbar = () => {
         </Toolbar>
       </AppBar>
     </Box>
-    <Card/>
+    {/* <Card/> */}
   <div id="verticalNavWrap">
     {/* PROFILE */}
     <div className="verticalNav">
@@ -120,7 +120,8 @@ const Navbar = () => {
             <h1 style={{fontFamily:"'DM Serif Display', serif"}}>────PROFILE────</h1>
             <Button variant="contained" sx={{backgroundColor:"#8e8e7e42",marginBottom:"1rem", width:"100%",'&:hover': {
             backgroundColor: '#d2d2bd'
-          }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#8d8d7f"}} >Add New Blog</Button>
+          }}} style={{fontFamily:"'DM Serif Display', serif",fontSize:"1.2rem",color:"#8d8d7f"}} >
+            <Link to="/newblog">Add New Blog</Link></Button>
             </div>
           </div>
         </div>

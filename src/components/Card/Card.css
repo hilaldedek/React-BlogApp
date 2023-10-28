@@ -72,7 +72,7 @@
     font-family: 'Pacifico', cursive;
     
     cursor: pointer;
-    position: relative;
+    /* position: relative; */
     border: none;
     background: none;
     
